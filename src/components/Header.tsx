@@ -6,6 +6,7 @@ import './Header.css';
 const Header: React.FC = () => {
   return (
     <header className="header">
+      <div className='acesso-usuario'>
       <div className="acesso-ava">
         <RiRobot2Fill className="icon" />
         <span className="texto">Acesso ao AVA</span>
@@ -13,6 +14,7 @@ const Header: React.FC = () => {
       <div className="area-servidor">
         <span className="texto">Área do Servidor</span>
         <FaUserCircle className="icon" />
+        </div>
       </div>
     </header>
   );

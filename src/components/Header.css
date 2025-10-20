@@ -1,11 +1,13 @@
 .header {
+  width: 100%;
   background-color: #075AA9;
   color: white;
-  padding: 1rem 10rem;
+  padding: 1rem 200px 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
 .acesso-ava,
@@ -26,10 +28,20 @@
   font-weight: 500;
 }
 
+.acesso-usuario {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
   .header {
-    padding: 1rem;
+    padding: 1rem 24px 12px;
   }
   
   .texto {
@@ -44,7 +56,7 @@
 
 @media (max-width: 480px) {
   .header {
-    padding: 0.75rem;
+    padding: 0.75rem 16px 10px;
   }
   
   .texto {

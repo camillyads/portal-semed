@@ -1,20 +1,22 @@
 import React from 'react';
+import Layout from './Layout/Layout';
 import './App.css';
 import Header from './components/Header';
 import Menu from './components/Menu';
+import Banner from './components/Banner';
 
 const App: React.FC = () => {
 
   return (
-    <div className="App">
-      <Header />
-      <Menu />
-      
-      <main className="main-content">
-        <section className="hero-section">
-        </section>
-      </main>
-    </div>
+    <Layout
+      header={<>
+        <Header />
+        <Menu />
+      </>}
+      body={<>
+        <Banner />
+      </>}
+    />
   );
 }
 

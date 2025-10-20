@@ -1,0 +1,105 @@
+/* Painel de popups (wrapper geral) */
+.popups-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinhado à esquerda */
+  width: 500px;
+  height: 80%;
+  align-self: flex-start;
+  box-sizing: border-box;
+  align-items: flex-end; /* Alinha conteúdo à direita dentro do painel */
+  align-self: flex-start; /* Segue alinhamento vertical do banner (topo) */
+  margin-left: auto; /* Empurra o painel para a direita dentro do container .banner */
+}
+
+/* Título acima dos popups */
+.popups-title {
+  color: white;
+  font-size: 1.75rem;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+  font-weight: 700;
+  text-align: center; /* Centraliza o título */
+  align-self: stretch; /* Permite ocupar toda a largura para o centro funcionar */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin: 0 0 12px 0; /* Espaço abaixo do título */
+  letter-spacing: 1px;
+}
+
+/* Lista que contém apenas os popups */
+.popups-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly; /* Espaçamento igual acima e abaixo dos popups */
+  align-items: flex-end; /* Mantém alinhamento à direita */
+  padding-top: 12px; /* Respiro superior */
+  padding-bottom: 12px; /* Respiro inferior */
+  width: 100%;
+  flex: 1; /* Ocupar altura disponível abaixo do título */
+  box-sizing: border-box;
+  align-items: flex-end; /* Alinha as caixas à direita dentro da coluna */
+}
+
+/* Estilo de cada popup */
+.popup {
+  background-color: #075AA9;
+  width: 400px;
+  max-width: 100%;
+  height: 90px; /* Reduz altura para melhorar o respiro inferior */
+  margin: 0;
+  padding: 16px;
+  border-radius: 12px; /* Bordas arredondadas */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: white;
+  font-size: 1rem;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  text-align: left;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  line-height: 1.1;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .popups-panel {
+    width: 50%;
+    height: 80%;
+  }
+  .popups-title {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+  .popups-list {
+    /* Mantém distribuição entre os itens no espaço disponível */
+  }
+  .popup {
+    width: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .popups-panel {
+    width: 100%;
+    height: auto;
+    align-self: stretch;
+    align-items: center; /* Em mobile, centraliza para melhor leitura */
+    margin-left: 0; /* Não precisa empurrar em telas pequenas */
+  }
+  .popups-title {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  .popups-list {
+    justify-content: center; /* Distribuição suave em mobile */
+    gap: 12px; /* Espaçamento consistente entre os popups em mobile */
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .popup {
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+  }
+}
